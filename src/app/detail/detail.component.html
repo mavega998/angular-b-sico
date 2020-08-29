@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="title">{{person?.name | uppercase}}</h1>
+    <table class="table">
+        <tr>
+            <td class="table-header">Altura <small>[cm]</small></td>
+            <td class="table-body">{{person?.height}}</td>
+        </tr>
+        <tr>
+            <td class="table-header">Peso <small>[gr]</small></td>
+            <td class="table-body">{{person?.mass}}</td>
+        </tr>
+        <tr>
+            <td class="table-header">Género</td>
+            <td class="table-body">{{person?.gender}}</td>
+        </tr>
+        <tr>
+            <td class="table-header">Color de Cabello</td>
+            <td class="table-body">{{person?.hair_color}}</td>
+        </tr>
+        <tr>
+            <td class="table-header">Color de ojos</td>
+            <td class="table-body">{{person?.eye_color}}</td>
+        </tr>
+        <tr>
+            <td class="table-header">Año de Nacimiento</td>
+            <td class="table-body">{{person?.birth_year}}</td>
+        </tr>
+    </table>
+    <div class="table-actions">
+        <button [routerLink]="['/']">Volver</button>
+    </div>
+</div>
