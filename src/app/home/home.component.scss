@@ -1,0 +1,39 @@
+.container {
+	padding: 10px;
+	.title {
+		font-size: 32px;
+	}
+	.description {
+		font-size: 18px;
+		padding: 10px;
+		background-color: #cccccc;
+	}
+	.table {
+		width: 100%;
+		.table-header {
+			background-color: #324857;
+			color: #ffffff;
+		}
+		.table-body {
+            &:nth-child(even) {
+                background: #ccc;
+            }
+            &:nth-child(odd) {
+                background: #fff;
+            }
+            .btn-details {
+                margin: auto;
+                width: 100%;
+            }
+        }
+	}
+	.table-actions {
+		margin: auto;
+		width: 12%;
+		// border: 3px solid green;
+		// padding: 10px;
+		button {
+			margin: 5px;
+		}
+	}
+}

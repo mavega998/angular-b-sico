@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="title">{{title | uppercase}}</h1>
+    <p class="description">
+      {{description}}
+    </p>
+    <table class="table">
+      <thead class="table-header">
+        <td>Nombre</td>
+        <td>Estatura <small>[cm]</small></td>
+        <td>Peso <small>[gr]</small></td>
+        <td>Género</td>
+        <td>Acción</td>
+      </thead>
+      <tr class="table-body" *ngFor="let item of characters">
+        <td>{{item.name}}</td>
+        <td>{{item.height}}</td>
+        <td>{{item.mass}}</td>
+        <td>{{item.gender}}</td>
+        <td>
+          <button [routerLink]="['detalle', item.url.replace('http://swapi.dev/api/people/','').replace('/','')]" class="btn-details">Ver Detalle</button>
+        </td>
+      </tr>
+    </table>
+    <div class="table-actions">
+      <button [disabled]="fPrev" (click)="loadPage(prev)">Anterior</button>
+      <button [disabled]="fNext" (click)="loadPage(next)">Siguiente</button>
+    </div>
+  </div>
